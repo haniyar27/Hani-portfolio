@@ -173,14 +173,16 @@ async function renderCertificates(){
   if (!rows.length){ el.innerHTML = emptyState('No certificates yet — add one in /admin.'); return; }
   const sorted = [...rows].sort((a,b)=> (b.year||0) - (a.year||0));
 
-  const groups = {};
+  // a plain object would reorder integer-like keys ("2015", "2021") into
+  // ascending numeric order and undo the newest-first sort above
+  const groups = new Map();
   sorted.forEach(r => {
     const key = r.period || String(r.year || 'Undated');
-    groups[key] = groups[key] || [];
-    groups[key].push(r);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(r);
   });
 
-  el.innerHTML = Object.entries(groups).map(([period, items]) => `
+  el.innerHTML = [...groups].map(([period, items]) => `
     <div class="cert-period">
       <div class="period-label">${period}</div>
       ${items.map(c => `
@@ -188,6 +190,8 @@ async function renderCertificates(){
           <div>
             <h3>${c.title}</h3>
             <div class="issuer">${c.issuer || ''}</div>
+            ${c.note ? `<p class="cert-note">${c.note}</p>` : ''}
+            ${c.link ? `<a class="cert-verify" href="${c.link}" target="_blank" rel="noopener">Verify credential ↗</a>` : ''}
           </div>
           <div class="year">${c.year || ''}</div>
         </div>`).join('')}

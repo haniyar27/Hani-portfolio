@@ -112,3 +112,5 @@ collections:
               - { label: "Issuer", name: "issuer", widget: "string", required: false }
               - { label: "Year", name: "year", widget: "number", value_type: "int" }
               - { label: "Period Label (groups entries together, e.g. 2023)", name: "period", widget: "string" }
+              - { label: "Note (what it covered, dates, credit rating)", name: "note", widget: "text", required: false }
+              - { label: "Verification link (e.g. Credly badge)", name: "link", widget: "string", required: false }

@@ -528,6 +528,16 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
 .cert-row .title{ font-family:var(--font-display); font-weight:800; font-size:19px; letter-spacing:-.02em; }
 .cert-row .issuer{ font-family:var(--font-serif); font-style:italic; color:var(--ink-soft); font-size:16px; }
 .cert-row .year{ font-size:12px; font-weight:700; letter-spacing:.12em; color:var(--ink-mute); white-space:nowrap; }
+.cert-note{
+  margin:8px 0 0; max-width:62ch;
+  font-size:15px; line-height:1.45; color:var(--ink-soft);
+}
+.cert-verify{
+  display:inline-block; margin-top:10px;
+  font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  padding-bottom:2px; border-bottom:2px solid var(--orange);
+}
+.cert-verify:hover{ background:var(--orange); }
 
 /* ============================================================
    EXPERIENCE DETAIL
