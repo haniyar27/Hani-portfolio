@@ -652,6 +652,55 @@ footer{
 .back-link:hover{ background:var(--orange); }
 
 /* ============================================================
+   GALLERY VIEW (a project's contact sheet)
+   ============================================================ */
+.gallery-view{
+  position:fixed; inset:0; z-index:180;
+  background:var(--bone);
+  overflow-y:auto; overscroll-behavior:contain;
+  opacity:0; visibility:hidden;
+  transition:opacity .3s var(--ease), visibility .3s;
+}
+.gallery-view.open{ opacity:1; visibility:visible; }
+.gallery-inner{ max-width:1240px; margin:0 auto; padding:88px 32px 96px; }
+.gallery-head{ margin-bottom:44px; max-width:60ch; }
+.gallery-head .cat{
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--orange); margin-bottom:12px;
+}
+.gallery-head h2{ margin-bottom:16px; }
+.gallery-head p{ font-size:18px; line-height:1.5; color:var(--ink-soft); margin:0; }
+.gallery-count{
+  margin-top:18px; font-size:12px; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute);
+}
+.gallery-grid{
+  display:grid; gap:18px;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+}
+.gallery-thumb{
+  padding:0; cursor:pointer; line-height:0;
+  background:var(--bone-deep); border:2.5px solid var(--ink); border-radius:16px;
+  overflow:hidden; aspect-ratio:3/4;
+  transition:transform .24s var(--pop);
+}
+.gallery-thumb:hover{ transform:translate(-3px,-5px); }
+.gallery-thumb img, .gallery-thumb video{ width:100%; height:100%; object-fit:cover; }
+.gallery-close{
+  position:fixed; top:22px; right:26px; z-index:2;
+  width:54px; height:54px; border-radius:50%;
+  background:var(--ink); color:var(--bone); border:none;
+  font-size:28px; line-height:1; cursor:pointer;
+  transition:transform .2s var(--pop), background .2s var(--ease);
+}
+.gallery-close:hover{ transform:rotate(90deg); background:var(--orange); color:var(--ink); }
+@media (max-width: 640px){
+  .gallery-inner{ padding:80px 22px 72px; }
+  .gallery-grid{ grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:12px; }
+  .gallery-close{ top:14px; right:16px; width:46px; height:46px; font-size:24px; }
+}
+
+/* ============================================================
    STATES + LIGHTBOX
    ============================================================ */
 .empty-state{

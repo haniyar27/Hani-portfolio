@@ -161,12 +161,63 @@ function paintProjects(filter){
 function labelFor(cat){
   return { branding:'Branding & Identity', media:'Media', experiments:'Experiments' }[cat] || cat;
 }
+/* A project opens as a contact sheet of everything in it; picking a frame
+   hands off to the lightbox, which already knows how to page through the
+   same list. */
 function openProject(slug){
   const p = allProjects.find(x=>x.slug===slug);
   if (!p || !p.media || !p.media.length) return;
-  openGallery(p.media, 0);
+
+  let sheet = document.querySelector('.gallery-view');
+  if (!sheet) {
+    sheet = document.createElement('div');
+    sheet.className = 'gallery-view';
+    document.body.appendChild(sheet);
+    sheet.addEventListener('click', (e) => {
+      if (e.target === sheet || e.target.closest('.gallery-close')) closeProject();
+    });
+    // capture phase: this has to decide before the lightbox's own Escape
+    // handler runs, otherwise the lightbox is already closed by the time we
+    // look and a single Escape collapses both layers at once
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || !sheet.classList.contains('open')) return;
+      if (document.querySelector('.lightbox.open')) return;   // lightbox closes first
+      closeProject();
+    }, true);
+  }
+
+  sheet.innerHTML = `
+    <button class="gallery-close" aria-label="Close gallery">&times;</button>
+    <div class="gallery-inner">
+      <div class="gallery-head">
+        <div class="cat">${labelFor(p.category)}${p.year ? ' — ' + p.year : ''}</div>
+        <h2>${p.title}</h2>
+        ${p.description ? `<p>${p.description}</p>` : ''}
+        <div class="gallery-count">${p.media.length} ${p.media.length === 1 ? 'frame' : 'frames'}</div>
+      </div>
+      <div class="gallery-grid">
+        ${p.media.map((mItem, i) => `
+          <button class="gallery-thumb" type="button" aria-label="${mItem.caption || p.title}"
+                  onclick="openGallery(${JSON.stringify(p.media).replace(/"/g, '&quot;')}, ${i})">
+            ${mItem.type === 'video'
+              ? `<video src="${mItem.url}" muted preload="metadata"></video>`
+              : `<img src="${mItem.url}" alt="${mItem.caption || p.title}" loading="lazy">`}
+          </button>`).join('')}
+      </div>
+    </div>`;
+
+  document.body.classList.add('menu-open');
+  requestAnimationFrame(() => sheet.classList.add('open'));
+}
+
+function closeProject(){
+  const sheet = document.querySelector('.gallery-view');
+  if (!sheet) return;
+  sheet.classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
 window.openProject = openProject;
+window.closeProject = closeProject;
 
 /* ---------------- CERTIFICATES ---------------- */
 async function renderCertificates(){

@@ -9,6 +9,61 @@
       "media": [
         {
           "type": "image",
+          "url": "images/creative/modeling/hotel-artwork-standing.jpg",
+          "caption": "Hotel lifestyle campaign — gallery wall"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-lobby-artwork.jpg",
+          "caption": "Hotel lifestyle campaign — lobby"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-gallery-walk.jpg",
+          "caption": "Hotel lifestyle campaign — art walk"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-lounge-reading.jpg",
+          "caption": "Hotel lifestyle campaign — lounge"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/restaurant-lifestyle.jpg",
+          "caption": "Restaurant lifestyle shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/restaurant-dining.jpg",
+          "caption": "Restaurant lifestyle shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/restaurant-dining-wide.jpg",
+          "caption": "Restaurant lifestyle shoot — wide"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/business-lunch.jpg",
+          "caption": "Business lunch campaign shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/business-lunch-meeting.jpg",
+          "caption": "Business lunch campaign — meeting"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/business-lunch-table.jpg",
+          "caption": "Business lunch campaign — table detail"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/ramadan-iftar-shoot.jpg",
+          "caption": "Ramadan iftar campaign shoot"
+        },
+        {
+          "type": "image",
           "url": "images/creative/modeling/studio-editorial-group.jpg",
           "caption": "Editorial studio shoot"
         },
@@ -24,43 +79,23 @@
         },
         {
           "type": "image",
-          "url": "images/creative/modeling/hotel-lobby-artwork.jpg",
-          "caption": "Hotel lifestyle campaign — lobby"
+          "url": "images/creative/modeling/portrait-winter.jpg",
+          "caption": "On location — winter"
         },
         {
           "type": "image",
-          "url": "images/creative/modeling/hotel-artwork-standing.jpg",
-          "caption": "Hotel lifestyle campaign — gallery wall"
+          "url": "images/creative/modeling/portrait-park.jpg",
+          "caption": "On location — park"
         },
         {
           "type": "image",
-          "url": "images/creative/modeling/hotel-gallery-walk.jpg",
-          "caption": "Hotel lifestyle campaign — art walk"
+          "url": "images/creative/modeling/portrait-cafe.jpg",
+          "caption": "On location — cafe"
         },
         {
           "type": "image",
-          "url": "images/creative/modeling/hotel-lounge-reading.jpg",
-          "caption": "Hotel lifestyle campaign — lounge"
-        },
-        {
-          "type": "image",
-          "url": "images/creative/modeling/ramadan-iftar-shoot.jpg",
-          "caption": "Ramadan iftar campaign shoot"
-        },
-        {
-          "type": "image",
-          "url": "images/creative/modeling/restaurant-lifestyle.jpg",
-          "caption": "Restaurant lifestyle shoot"
-        },
-        {
-          "type": "image",
-          "url": "images/creative/modeling/restaurant-dining.jpg",
-          "caption": "Restaurant lifestyle shoot"
-        },
-        {
-          "type": "image",
-          "url": "images/creative/modeling/business-lunch.jpg",
-          "caption": "Business lunch campaign shoot"
+          "url": "images/creative/modeling/portrait-bookshop.jpg",
+          "caption": "On location — bookshop"
         }
       ]
     }
