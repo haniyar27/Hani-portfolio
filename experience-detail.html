@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Hani Abbas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="index.html">HANI<span>.</span>ABBAS</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="creative-work.html">Creative Work</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="grid-bg">
+  <div class="wrap">
+    <a href="experience.html" style="font-family:var(--font-mono); font-size:12px; color:var(--brass); text-transform:uppercase; letter-spacing:.06em;">← All Experience</a>
+    <div id="detail-root" style="margin-top:32px;">
+      <div class="empty-state">Loading…</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Hani Abbas</span>
+    <a href="contact.html">Get in touch →</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+<script src="js/content-loader.js"></script>
+</body>
+</html>

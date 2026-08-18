@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "Diploma in Computer Technology",
+      "issuer": "Sh. Khalifa Bin Salman Institute of Technology",
+      "year": 2015,
+      "period": "2015"
+    },
+    {
+      "title": "Bachelor's in Mechatronic Engineering",
+      "issuer": "AMA International University",
+      "year": 2021,
+      "period": "2021"
+    },
+    {
+      "title": "Immersive UX Design Course",
+      "issuer": "General Assembly, Bahrain",
+      "year": 2022,
+      "period": "2022"
+    },
+    {
+      "title": "Diploma in Human Resource Management",
+      "issuer": "Al Ghad Training Institute",
+      "year": 2023,
+      "period": "2023"
+    },
+    {
+      "title": "Adobe Photoshop, Illustrator & Premiere",
+      "issuer": "Maharati, Bahrain",
+      "year": 2023,
+      "period": "2023"
+    },
+    {
+      "title": "Graphic Design & Motion Graphics Workshops",
+      "issuer": "",
+      "year": 2023,
+      "period": "2023"
+    }
+  ]
+}
