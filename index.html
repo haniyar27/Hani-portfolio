@@ -12,25 +12,23 @@
 <header class="site-nav">
   <div class="nav-inner">
     <a class="nav-mark" href="/">HANI<span>.</span>ABBAS</a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="site-menu">
       <a href="/">Home</a>
       <a href="/experience">Experience</a>
       <a href="/creative-work">Creative Work</a>
       <a href="/certificates">Certificates</a>
       <a href="/contact">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
   </div>
 </header>
 
-<section class="hero grid-bg">
-  <div class="hero-signature" aria-hidden="true">
-    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-      <path class="brush-path" d="M -50,650 C 150,600 250,720 400,600 C 550,480 600,700 750,580 C 900,460 950,640 1100,560 C 1180,520 1220,540 1260,500" />
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="hero-content">
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-copy">
       <div class="hero-hi" id="hero-hi">Welcome</div>
       <h1 id="hero-title">Hani Abbas</h1>
       <div class="hero-role" id="hero-role">Marketing &amp; Brand Specialist</div>
@@ -40,10 +38,52 @@
         <a class="btn" href="/creative-work">See Creative Work</a>
       </div>
     </div>
+
+    <div class="hero-portrait">
+      <img src="images/portrait/hani.jpg"
+           srcset="images/portrait/hani-sm.jpg 700w, images/portrait/hani.jpg 1200w"
+           sizes="(max-width: 900px) 88vw, 460px"
+           width="706" height="1200"
+           alt="Portrait of Hani Abbas" fetchpriority="high">
+
+      <div class="sticker sticker-burst" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <path fill="#F5693C" d="M100 4l14 34 30-24-6 38 38-6-24 30 34 14-34 14 24 30-38-6 6 38-30-24-14 34-14-34-30 24 6-38-38 6 24-30L4 100l34-14-24-30 38 6-6-38 30 24z"/>
+          <text class="burst-text" x="100" y="94" text-anchor="middle">BRAND</text>
+          <text class="burst-text" x="100" y="122" text-anchor="middle">BUILDER</text>
+        </svg>
+      </div>
+
+      <div class="sticker sticker-note" aria-hidden="true">engineer → creative</div>
+    </div>
+
+    <div class="hero-overlap" aria-hidden="true">
+      <span class="said">strategy</span><br>meets craft
+    </div>
+
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Brand Strategy</span><span class="dot">✱</span>
+      <span>Creative Direction</span><span class="dot">✱</span>
+      <span>Hospitality</span><span class="dot">✱</span>
+      <span>Retail</span><span class="dot">✱</span>
+      <span>B2B Events</span><span class="dot">✱</span>
+      <span>Bahrain</span><span class="dot">✱</span>
+    </div>
+    <div class="marquee-track">
+      <span>Brand Strategy</span><span class="dot">✱</span>
+      <span>Creative Direction</span><span class="dot">✱</span>
+      <span>Hospitality</span><span class="dot">✱</span>
+      <span>Retail</span><span class="dot">✱</span>
+      <span>B2B Events</span><span class="dot">✱</span>
+      <span>Bahrain</span><span class="dot">✱</span>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="section-canvas">
   <div class="wrap">
     <div class="eyebrow">The Story</div>
     <div class="about-grid">
@@ -61,11 +101,11 @@
   </div>
 </section>
 
-<section style="padding-top:0;">
+<section>
   <div class="wrap">
     <div class="eyebrow">Explore</div>
     <div class="section-head">
-      <h2>Where to look next</h2>
+      <h2>Where to look <span class="ringed">next</span></h2>
     </div>
   </div>
   <div class="wrap" style="padding:0;">

@@ -5,13 +5,27 @@
    gets a working preview window with zero extra setup.
    ============================================================ */
 
-// ---- mobile nav toggle ----
+// ---- mobile nav ----
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
+
   if (toggle && links) {
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    const setMenu = (open) => {
+      links.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); toggle.focus(); }
+    });
+    // never leave the sheet stranded when resizing up to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && links.classList.contains('open')) setMenu(false);
+    });
   }
 
   // mark active nav link
@@ -71,9 +85,9 @@ function openMedia(item){
       inner.innerHTML = `<iframe src="${embed}" title="${item.caption || 'Video'}" allow="autoplay; encrypted-media" allowfullscreen></iframe>${cap}`;
     } else {
       inner.innerHTML = `
-        <div style="background:var(--blueprint); padding:48px; text-align:center; max-width:520px; margin:0 auto;">
-          <div style="font-family:var(--font-mono); font-size:12px; color:var(--brass); text-transform:uppercase; margin-bottom:14px;">External link</div>
-          <p style="color:var(--canvas); margin-bottom:24px;">${item.caption || item.url}</p>
+        <div class="link-card">
+          <div class="link-card-label">External link</div>
+          <p>${item.caption || item.url}</p>
           <a class="btn btn-solid" href="${item.url}" target="_blank" rel="noopener">Open link ↗</a>
         </div>`;
     }
