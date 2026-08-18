@@ -1,5 +1,8 @@
 .DS_Store
 
-# raw source material kept locally, not published
-images/modeling/
-branding/
+# raw source material kept locally, not published.
+# leading slash matters: an unanchored "branding/" would also swallow
+# images/creative/branding/, which is the published output.
+/images/modeling/
+/branding/
+/experments/

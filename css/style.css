@@ -674,18 +674,19 @@ footer{
   margin-top:18px; font-size:12px; font-weight:700;
   letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute);
 }
-.gallery-grid{
-  display:grid; gap:18px;
-  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
-}
+/* columns rather than a fixed grid: brand pages are landscape and photos
+   are portrait, and a shared aspect-ratio would crop half of both */
+.gallery-grid{ columns:3 260px; column-gap:18px; }
 .gallery-thumb{
+  display:block; width:100%; margin:0 0 18px;
   padding:0; cursor:pointer; line-height:0;
+  break-inside:avoid; -webkit-column-break-inside:avoid;
   background:var(--bone-deep); border:2.5px solid var(--ink); border-radius:16px;
-  overflow:hidden; aspect-ratio:3/4;
+  overflow:hidden;
   transition:transform .24s var(--pop);
 }
 .gallery-thumb:hover{ transform:translate(-3px,-5px); }
-.gallery-thumb img, .gallery-thumb video{ width:100%; height:100%; object-fit:cover; }
+.gallery-thumb img, .gallery-thumb video{ width:100%; height:auto; display:block; }
 .gallery-close{
   position:fixed; top:22px; right:26px; z-index:2;
   width:54px; height:54px; border-radius:50%;
@@ -696,7 +697,8 @@ footer{
 .gallery-close:hover{ transform:rotate(90deg); background:var(--orange); color:var(--ink); }
 @media (max-width: 640px){
   .gallery-inner{ padding:80px 22px 72px; }
-  .gallery-grid{ grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:12px; }
+  .gallery-grid{ columns:2 140px; column-gap:12px; }
+  .gallery-thumb{ margin-bottom:12px; }
   .gallery-close{ top:14px; right:16px; width:46px; height:46px; font-size:24px; }
 }
 

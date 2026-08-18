@@ -1,6 +1,267 @@
 {
   "items": [
     {
+      "slug": "eden",
+      "title": "Eden",
+      "category": "branding",
+      "year": 2022,
+      "description": "Logo and brand guidelines for a Bahraini fashion label — a monogram built from interlocking E and D forms, carried through packaging, hang tags, retail signage and social.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/cover.jpg",
+          "caption": "Logo and brand guidelines"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/storefront.jpg",
+          "caption": "Retail signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/packaging.jpg",
+          "caption": "Packaging"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/bags.jpg",
+          "caption": "Carrier bags"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/hang-tags.jpg",
+          "caption": "Hang tags"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/business-cards.jpg",
+          "caption": "Stationery"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/eden/social.jpg",
+          "caption": "Social media system"
+        }
+      ]
+    },
+    {
+      "slug": "bonny-plaza",
+      "title": "Bonny Plaza",
+      "category": "branding",
+      "year": 2022,
+      "description": "Brand guide for a cosmetics retailer — a playful monogram, a pastel palette and a pattern language that runs from storefront to packaging to loyalty cards.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/cover.jpg",
+          "caption": "Brand guide"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/storefront.jpg",
+          "caption": "Storefront"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/packaging.jpg",
+          "caption": "Packaging"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/stationery.jpg",
+          "caption": "Stationery"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/bonny-plaza/social.jpg",
+          "caption": "Social media"
+        }
+      ]
+    },
+    {
+      "slug": "vape-way",
+      "title": "Vape Way Trading",
+      "category": "branding",
+      "year": 2022,
+      "description": "Logo and brand guidelines for a vape retailer — a neon-leaning mark designed to hold up lit, on signage and billboards as well as on paper.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/cover.jpg",
+          "caption": "Logo and brand guidelines"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/neon-signage.jpg",
+          "caption": "Neon signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/facade.jpg",
+          "caption": "Facade signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/billboard.jpg",
+          "caption": "Billboard"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/stationery.jpg",
+          "caption": "Stationery"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/vape-way/social.jpg",
+          "caption": "Social media"
+        }
+      ]
+    },
+    {
+      "slug": "dukhan-store",
+      "title": "Dukhan Store",
+      "category": "branding",
+      "year": 2023,
+      "description": "Branding guide for a bilingual retail concept — an illustrated mark with Arabic and Latin lockups, applied across storefront, packaging and print.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/dukhan-store/cover.jpg",
+          "caption": "Branding guide"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dukhan-store/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dukhan-store/storefront.jpg",
+          "caption": "Storefront"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dukhan-store/packaging.jpg",
+          "caption": "Packaging"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dukhan-store/business-cards.jpg",
+          "caption": "Business cards"
+        }
+      ]
+    },
+    {
+      "slug": "thoma",
+      "title": "Thoma",
+      "category": "branding",
+      "year": 2023,
+      "description": "Identity for an Egyptian-Bahraini restaurant. The name means garlic in Arabic, so the mark is a garlic bulb character, with a bilingual lockup and a pattern set for packaging and signage.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/thoma/cover.jpg",
+          "caption": "Brand identity"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/thoma/logo-versions.jpg",
+          "caption": "Logo versions"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/thoma/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/thoma/patterns.jpg",
+          "caption": "Patterns"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/thoma/signage.jpg",
+          "caption": "Sign board"
+        }
+      ]
+    },
+    {
+      "slug": "marche-du-mariage",
+      "title": "Marché du Mariage",
+      "category": "branding",
+      "year": 2024,
+      "description": "Brand and pitch deck for a wedding expo at Exhibition World Bahrain — a monogram, an editorial layout system and the exhibitor-facing profile that sold the show.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/marche-du-mariage/cover.jpg",
+          "caption": "Expo brand"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/marche-du-mariage/concept.jpg",
+          "caption": "Concept"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/marche-du-mariage/runway.jpg",
+          "caption": "Runway showcase"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/marche-du-mariage/highlights.jpg",
+          "caption": "Show highlights"
+        }
+      ]
+    },
+    {
+      "slug": "doponda",
+      "title": "Doponda",
+      "category": "branding",
+      "year": 2022,
+      "description": "Identity for a fashion label — a script wordmark set inside a diamond frame, with construction grid, palette and pattern worked out on a single brand board.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/doponda/brand-board.jpg",
+          "caption": "Brand board"
+        }
+      ]
+    },
+    {
+      "slug": "daisy",
+      "title": "Daisy",
+      "category": "branding",
+      "year": 2022,
+      "description": "Identity for a boutique label — a fine-line serif wordmark, a botanical illustration set and a muted rose palette applied to packaging.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/daisy/brand-board.jpg",
+          "caption": "Brand board"
+        }
+      ]
+    },
+    {
+      "slug": "painting",
+      "title": "Painting",
+      "category": "experiments",
+      "year": 2023,
+      "description": "Murals and painting — where the whole thing started, before the Adobe suite and the brand guidelines. More work to be added here.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/painting/painting-01.jpg",
+          "caption": "Lotus mural in progress"
+        }
+      ]
+    },
+    {
       "slug": "modeling",
       "title": "Modeling",
       "category": "experiments",
