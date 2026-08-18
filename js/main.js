@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // mark active nav link
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const norm = p => p.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+  const path = norm(location.pathname);
   document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.getAttribute('href') === path) a.classList.add('active');
+    if (norm(a.getAttribute('href')) === path) a.classList.add('active');
   });
 
   buildLightbox();
