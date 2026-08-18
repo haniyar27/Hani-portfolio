@@ -182,7 +182,14 @@ async function renderCertificates(){
     groups.get(key).push(r);
   });
 
-  el.innerHTML = [...groups].map(([period, items]) => `
+  // year groups first, newest down; named groups such as "Community" after
+  const ordered = [...groups].sort((a, b) => {
+    const na = /^\d{4}$/.test(a[0]), nb = /^\d{4}$/.test(b[0]);
+    if (na && nb) return Number(b[0]) - Number(a[0]);
+    return na ? -1 : nb ? 1 : 0;
+  });
+
+  el.innerHTML = ordered.map(([period, items]) => `
     <div class="cert-period">
       <div class="period-label">${period}</div>
       ${items.map(c => `
@@ -192,10 +199,30 @@ async function renderCertificates(){
             <div class="issuer">${c.issuer || ''}</div>
             ${c.note ? `<p class="cert-note">${c.note}</p>` : ''}
             ${c.link ? `<a class="cert-verify" href="${c.link}" target="_blank" rel="noopener">Verify credential ↗</a>` : ''}
+            ${certShots(c)}
           </div>
           <div class="year">${c.year || ''}</div>
         </div>`).join('')}
     </div>`).join('');
+}
+
+
+/* one or many photos on a certificate / recognition */
+function certPhotos(c){
+  if (Array.isArray(c.photos) && c.photos.length) return c.photos;
+  if (c.image) return [{ url: c.image, caption: c.imageCaption || '' }];
+  return [];
+}
+function certShots(c){
+  const shots = certPhotos(c);
+  if (!shots.length) return '';
+  return `<div class="cert-shots">${shots.map(p => {
+    const item = { type: 'image', url: p.url, caption: p.caption || c.title };
+    return `<button class="cert-shot" type="button" aria-label="${p.caption || c.title}"
+        onclick="openMedia(${JSON.stringify(item).replace(/"/g, '&quot;')})">
+        <img src="${p.url}" alt="${p.caption || c.title}" loading="lazy">
+      </button>`;
+  }).join('')}</div>`;
 }
 
 /* ---------------- helpers ---------------- */

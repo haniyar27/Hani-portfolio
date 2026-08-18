@@ -1,20 +1,32 @@
 {
   "items": [
     {
-      "title": "Elevate Leadership Development Program",
+      "title": "Elevate by Marriott International",
       "issuer": "Marriott International",
       "year": 2026,
       "period": "2026",
-      "note": "A six-month leadership and personal development program covering emotional intelligence, communication, trust, change management, and career growth.",
-      "link": ""
+      "note": "A six-month leadership and personal development programme covering emotional intelligence, communication, trust, change management and career growth. The certificate cites business acumen, professional communication and management fundamentals. Signed by Ty Breland, EVP and Chief Human Resources Officer.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/recognitions/elevate-certificate.jpg",
+          "caption": "Elevate by Marriott International — certificate of completion"
+        }
+      ]
     },
     {
       "title": "Hidden Gem — Employee Recognition",
       "issuer": "Sheraton Bahrain Hotel (Marriott International)",
       "year": 2025,
       "period": "2025",
-      "note": "Awarded July 2025 for dedication and commitment to service excellence.",
-      "link": ""
+      "note": "Awarded July 2025 for dedication and commitment to service excellence, presented at the hotel town hall.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/recognitions/hidden-gem-townhall.jpg",
+          "caption": "Receiving the Hidden Gem recognition at the Sheraton Bahrain town hall"
+        }
+      ]
     },
     {
       "title": "Hidden Gem Nominee",
@@ -22,15 +34,54 @@
       "year": 2025,
       "period": "2025",
       "note": "Nominated for the May 2025 cycle.",
-      "link": ""
+      "link": "",
+      "photos": []
     },
     {
       "title": "TakeCare Champion",
       "issuer": "Sheraton Bahrain Hotel (Marriott International)",
       "year": 2025,
+      "period": "Community",
+      "note": "Served as one of the hotel’s TakeCare Champions, helping run the associate engagement programme — team socials, celebrations and the moments that bring colleagues together. Recognised with a TakeCare Champion certificate.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/recognitions/takecare-gm-afternoon-tea.jpg",
+          "caption": "Afternoon tea with the GM — the TakeCare team"
+        },
+        {
+          "url": "images/recognitions/takecare-associate-lunch.jpg",
+          "caption": "Running an associate lunch as a TakeCare Champion"
+        }
+      ]
+    },
+    {
+      "title": "FACT Dining Awards 2025 — two wins for outlets I launched",
+      "issuer": "FACT Magazine",
+      "year": 2025,
       "period": "2025",
-      "note": "In recognition of dedication and valued contributions to the TakeCare Program.",
-      "link": ""
+      "note": "Golestan Persian Grill took Best Restaurant of the Year and Brasero Atlántico took Favourite Newcomer, Fine Dining. I led the branding, marketing and launch of both outlets from pre-opening.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/recognitions/fact-dining-awards-2025.jpg",
+          "caption": "The Sheraton Bahrain team at the FACT Dining Awards 2025"
+        }
+      ]
+    },
+    {
+      "title": "Bahrain's 25 Best Restaurants 2025 — Brasero Atlántico",
+      "issuer": "Bahrain Confidential",
+      "year": 2025,
+      "period": "2025",
+      "note": "Voted in by the public. I led the branding, marketing and launch of the outlet from pre-opening.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/sheraton/brasero-best-restaurants-2025.jpg",
+          "caption": "Brasero Atlántico — Bahrain Confidential Best Restaurants 2025"
+        }
+      ]
     },
     {
       "title": "Diploma in Human Resource Management",
@@ -38,7 +89,8 @@
       "year": 2024,
       "period": "2024",
       "note": "Credit-rated by the University of the West of Scotland as an SCQF Level 7 qualification, 15 credit points. Issued 22 Feb 2024.",
-      "link": "https://www.credly.com/badges/926b6c4c-bb98-4eb0-bff5-47ea81981f4f"
+      "link": "https://www.credly.com/badges/926b6c4c-bb98-4eb0-bff5-47ea81981f4f",
+      "photos": []
     },
     {
       "title": "Adobe Photoshop, Illustrator & Premiere",
@@ -46,7 +98,8 @@
       "year": 2023,
       "period": "2023",
       "note": "",
-      "link": ""
+      "link": "",
+      "photos": []
     },
     {
       "title": "Graphic Design & Motion Graphics Workshops",
@@ -54,7 +107,8 @@
       "year": 2023,
       "period": "2023",
       "note": "",
-      "link": ""
+      "link": "",
+      "photos": []
     },
     {
       "title": "User Experience Design Immersive",
@@ -62,7 +116,8 @@
       "year": 2022,
       "period": "2022",
       "note": "400 hours over 10 weeks, 16 Oct – 22 Dec 2022. Design research, wireframing, prototyping, usability testing, UI design and design systems.",
-      "link": ""
+      "link": "",
+      "photos": []
     },
     {
       "title": "Bachelor of Science in Mechatronics Engineering",
@@ -70,7 +125,8 @@
       "year": 2021,
       "period": "2021",
       "note": "Academic requirements completed in academic year 2020–2021; certified 23 June 2021.",
-      "link": ""
+      "link": "",
+      "photos": []
     },
     {
       "title": "Diploma in Computer Technology",
@@ -78,7 +134,22 @@
       "year": 2015,
       "period": "2015",
       "note": "",
-      "link": ""
+      "link": "",
+      "photos": []
+    },
+    {
+      "title": "Bahraini Women’s Day celebration",
+      "issuer": "Sheraton Bahrain Hotel (Marriott International)",
+      "year": 2025,
+      "period": "Community",
+      "note": "One of the TakeCare team celebrations marking Bahraini Women’s Day with colleagues across the hotel.",
+      "link": "",
+      "photos": [
+        {
+          "url": "images/recognitions/bahraini-womens-day.jpg",
+          "caption": "Bahraini Women’s Day at Sheraton Bahrain Hotel"
+        }
+      ]
     }
   ]
 }

@@ -538,6 +538,18 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
   padding-bottom:2px; border-bottom:2px solid var(--orange);
 }
 .cert-verify:hover{ background:var(--orange); }
+.cert-shots{
+  display:grid; gap:12px; margin-top:16px;
+  grid-template-columns:repeat(auto-fill, minmax(190px, 240px));
+}
+.cert-shot{
+  display:block; padding:0; cursor:pointer; width:100%;
+  background:none; border:2.5px solid var(--ink); border-radius:14px;
+  overflow:hidden; line-height:0;
+  transition:transform .24s var(--pop);
+}
+.cert-shot:hover{ transform:translate(-2px,-4px); }
+.cert-shot img{ width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
 
 /* ============================================================
    EXPERIENCE DETAIL

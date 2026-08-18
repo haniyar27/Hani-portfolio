@@ -97,7 +97,7 @@ collections:
                   - { label: "Caption", name: "caption", widget: "string", required: false }
 
   - name: "certificates"
-    label: "Certificates & Awards"
+    label: "Certificates & Recognitions"
     files:
       - name: "certificates_list"
         label: "All Certificates"
@@ -114,3 +114,10 @@ collections:
               - { label: "Period Label (groups entries together, e.g. 2023)", name: "period", widget: "string" }
               - { label: "Note (what it covered, dates, credit rating)", name: "note", widget: "text", required: false }
               - { label: "Verification link (e.g. Credly badge)", name: "link", widget: "string", required: false }
+              - label: "Photos (optional)"
+                name: "photos"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Photo", name: "url", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
