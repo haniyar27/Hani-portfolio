@@ -31,19 +31,22 @@ async function loadList(path){
 
 function mediaTile(item){
   const tagLabel = { image:'Photo', video:'Video', pdf:'PDF', link:'Watch' }[item.type] || 'Media';
+  // entity-encode the payload: a caption containing an apostrophe would
+  // otherwise close the attribute and swallow the rest of the tile
+  const call = `openMedia(${JSON.stringify(item).replace(/"/g, '&quot;')})`;
   if (item.type === 'image') {
-    return `<div class="media-tile" onclick='openMedia(${JSON.stringify(item)})'>
+    return `<div class="media-tile" onclick="${call}">
       <span class="tag">${tagLabel}</span><img src="${item.url}" alt="${item.caption||''}" loading="lazy">
     </div>`;
   }
   if (item.type === 'video') {
-    return `<div class="media-tile" onclick='openMedia(${JSON.stringify(item)})'>
+    return `<div class="media-tile" onclick="${call}">
       <span class="tag">${tagLabel}</span><video src="${item.url}" muted preload="metadata"></video>
     </div>`;
   }
   let domain = '';
   try { domain = new URL(item.url).hostname.replace('www.',''); } catch(e){ domain = item.type.toUpperCase(); }
-  return `<div class="media-tile link-tile" onclick='openMedia(${JSON.stringify(item)})'>
+  return `<div class="media-tile link-tile" onclick="${call}">
     <span class="tag">${tagLabel}</span>
     <span class="domain">${domain}</span>
     <span class="title">${item.caption || 'View'}</span>
