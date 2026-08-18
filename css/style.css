@@ -702,6 +702,29 @@ footer{
 }
 .lightbox-close:hover{ transform:rotate(90deg); background:var(--orange); }
 
+.lightbox-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:56px; height:56px; border-radius:50%;
+  display:none; place-items:center;
+  background:var(--bone); color:var(--ink); border:none;
+  font-size:32px; line-height:1; padding-bottom:4px; cursor:pointer;
+  transition:background .2s var(--ease), transform .2s var(--pop);
+}
+.lightbox-nav:hover{ background:var(--orange); }
+.lightbox-nav.prev{ left:22px; }
+.lightbox-nav.next{ right:22px; }
+.lightbox-count{
+  position:absolute; top:30px; left:50%; transform:translateX(-50%);
+  display:none;
+  font-family:var(--font-body); font-weight:700; font-size:12px;
+  letter-spacing:.16em; color:var(--bone);
+}
+@media (max-width: 640px){
+  .lightbox-nav{ width:46px; height:46px; font-size:26px; }
+  .lightbox-nav.prev{ left:8px; }
+  .lightbox-nav.next{ right:8px; }
+}
+
 @media (max-width: 640px){
   .wrap{ padding:0 22px; }
   .nav-inner{ padding:0 22px; }

@@ -164,7 +164,7 @@ function labelFor(cat){
 function openProject(slug){
   const p = allProjects.find(x=>x.slug===slug);
   if (!p || !p.media || !p.media.length) return;
-  openMedia(p.media[0]);
+  openGallery(p.media, 0);
 }
 window.openProject = openProject;
 

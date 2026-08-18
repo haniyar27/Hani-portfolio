@@ -45,12 +45,22 @@ function buildLightbox(){
   lb.className = 'lightbox';
   lb.innerHTML = `
     <button class="lightbox-close" aria-label="Close preview">&times;</button>
+    <button class="lightbox-nav prev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox-nav next" aria-label="Next">&#8250;</button>
+    <div class="lightbox-count"></div>
     <div class="lightbox-inner"></div>
   `;
   document.body.appendChild(lb);
   lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
   lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  lb.querySelector('.prev').addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+  lb.querySelector('.next').addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
 }
 
 function closeLightbox(){
@@ -58,7 +68,37 @@ function closeLightbox(){
   if (!lb) return;
   lb.classList.remove('open');
   lb.querySelector('.lightbox-inner').innerHTML = '';
+  gallery = [];
 }
+
+/* ---- gallery state ----
+   One item and many items go through the same path; the nav only shows
+   itself once there is somewhere to go. */
+let gallery = [], galleryAt = 0;
+
+function openGallery(items, start){
+  gallery = (items || []).filter(Boolean);
+  if (!gallery.length) return;
+  galleryAt = Math.max(0, Math.min(start || 0, gallery.length - 1));
+  paintGallery();
+}
+
+function step(delta){
+  if (gallery.length < 2) return;
+  galleryAt = (galleryAt + delta + gallery.length) % gallery.length;
+  paintGallery();
+}
+
+function paintGallery(){
+  renderMedia(gallery[galleryAt]);
+  const lb = document.querySelector('.lightbox');
+  const many = gallery.length > 1;
+  lb.querySelectorAll('.lightbox-nav').forEach(b => b.style.display = many ? 'grid' : 'none');
+  const count = lb.querySelector('.lightbox-count');
+  count.style.display = many ? 'block' : 'none';
+  count.textContent = `${galleryAt + 1} / ${gallery.length}`;
+}
+window.openGallery = openGallery;
 
 /**
  * openMedia(item) — item: { type: 'image'|'video'|'pdf'|'link', url, caption, embed }
@@ -66,6 +106,10 @@ function closeLightbox(){
  * other links open a simple preview card with an "open" action.
  */
 function openMedia(item){
+  openGallery([item], 0);
+}
+
+function renderMedia(item){
   buildLightbox();
   const lb = document.querySelector('.lightbox');
   const inner = lb.querySelector('.lightbox-inner');

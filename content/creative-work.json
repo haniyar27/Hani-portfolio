@@ -1,3 +1,68 @@
 {
-  "items": []
+  "items": [
+    {
+      "slug": "modeling",
+      "title": "Modeling",
+      "category": "experiments",
+      "year": 2025,
+      "description": "Stepping in front of the camera instead of behind it — editorial studio work and lifestyle campaign shoots for the hotel. Being the subject changed how I direct one: you feel very quickly what a brief asks of the person in frame.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/modeling/studio-editorial-group.jpg",
+          "caption": "Editorial studio shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/studio-zara-bts.jpg",
+          "caption": "Behind the scenes on the studio set"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/studio-lighting-bts.jpg",
+          "caption": "On set — lighting and crew"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-lobby-artwork.jpg",
+          "caption": "Hotel lifestyle campaign — lobby"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-artwork-standing.jpg",
+          "caption": "Hotel lifestyle campaign — gallery wall"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-gallery-walk.jpg",
+          "caption": "Hotel lifestyle campaign — art walk"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/hotel-lounge-reading.jpg",
+          "caption": "Hotel lifestyle campaign — lounge"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/ramadan-iftar-shoot.jpg",
+          "caption": "Ramadan iftar campaign shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/restaurant-lifestyle.jpg",
+          "caption": "Restaurant lifestyle shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/restaurant-dining.jpg",
+          "caption": "Restaurant lifestyle shoot"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/modeling/business-lunch.jpg",
+          "caption": "Business lunch campaign shoot"
+        }
+      ]
+    }
+  ]
 }
