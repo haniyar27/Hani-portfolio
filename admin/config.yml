@@ -5,8 +5,8 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: https://REPLACE_WITH_YOUR_DOMAIN
-display_url: https://REPLACE_WITH_YOUR_DOMAIN
+site_url: https://haniyar.art
+display_url: https://haniyar.art
 logo_url: ""
 
 collections:
@@ -97,7 +97,7 @@ collections:
                   - { label: "Caption", name: "caption", widget: "string", required: false }
 
   - name: "certificates"
-    label: "Certificates & Awards"
+    label: "Certificates & Recognitions"
     files:
       - name: "certificates_list"
         label: "All Certificates"
@@ -112,3 +112,12 @@ collections:
               - { label: "Issuer", name: "issuer", widget: "string", required: false }
               - { label: "Year", name: "year", widget: "number", value_type: "int" }
               - { label: "Period Label (groups entries together, e.g. 2023)", name: "period", widget: "string" }
+              - { label: "Note (what it covered, dates, credit rating)", name: "note", widget: "text", required: false }
+              - { label: "Verification link (e.g. Credly badge)", name: "link", widget: "string", required: false }
+              - label: "Photos (optional)"
+                name: "photos"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Photo", name: "url", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
