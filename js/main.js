@@ -28,11 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // mark active nav link
-  const norm = p => p.replace(/\.html$/, '').replace(/\/$/, '') || '/';
-  const path = norm(location.pathname);
+  // mark active nav link — compare page names only, so the links stay
+  // relative and keep matching whether the site is served from a domain
+  // root or a GitHub Pages subpath
+  const pageName = p => (p.split(/[?#]/)[0].split('/').pop() || '').replace(/\.html$/, '') || 'index';
+  const here = pageName(location.pathname);
   document.querySelectorAll('.nav-links a').forEach(a => {
-    if (norm(a.getAttribute('href')) === path) a.classList.add('active');
+    const href = a.getAttribute('href') || '';
+    if (/^[a-z]+:|^\/\//i.test(href)) return;   // leave external links alone
+    if (pageName(href) === here) a.classList.add('active');
   });
 
   buildLightbox();

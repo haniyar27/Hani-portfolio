@@ -74,7 +74,7 @@ async function renderExperienceList(){
   if (!rows.length){ el.innerHTML = emptyState('No experience entries yet — add one in /admin.'); return; }
   const sorted = [...rows].sort((a,b)=> (b.order||0) - (a.order||0));
   el.innerHTML = sorted.map(r => `
-    <a class="timeline-row" href="/experience-detail?id=${r.slug}">
+    <a class="timeline-row" href="experience-detail.html?id=${r.slug}">
       <div class="timeline-dates">${fmtRange(r.startDate, r.endDate)}</div>
       <div class="timeline-main">
         <h3>${r.company}</h3>

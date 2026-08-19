@@ -3,7 +3,7 @@ backend:
   branch: main
 
 media_folder: "images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 
 site_url: https://haniyar.art
 display_url: https://haniyar.art
