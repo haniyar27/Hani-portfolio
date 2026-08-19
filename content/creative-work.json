@@ -6,7 +6,7 @@
       "category": "branding",
       "year": 2022,
       "order": 260,
-      "description": "Logo and brand guidelines for a Bahraini fashion label — a monogram built from interlocking E and D forms, carried through packaging, hang tags, retail signage and social.",
+      "description": "Logo and brand guidelines for a Bahraini fashion label. The monogram interlocks an E and a D, and it carries through packaging, hang tags, retail signage and social.",
       "media": [
         {
           "type": "image",
@@ -51,7 +51,7 @@
       "category": "branding",
       "year": 2023,
       "order": 250,
-      "description": "Identity for a bilingual food brand — a folded-leaf mark with Arabic and Latin lockups, a sage and terracotta palette, and a pattern for packaging.",
+      "description": "Identity for a bilingual food brand. A folded leaf mark, Arabic and Latin lockups, a sage and terracotta palette, and a pattern for the packaging.",
       "media": [
         {
           "type": "image",
@@ -62,11 +62,11 @@
     },
     {
       "slug": "manama-medical",
-      "title": "Manama Medical — rebranding",
+      "title": "Manama Medical rebrand",
       "category": "branding",
       "year": 2025,
       "order": 240,
-      "description": "Rebranding for a Bahraini medical import and export company running since 1996 — a heartbeat line that draws the M of the monogram, and the full company profile we designed around it.",
+      "description": "A rebrand for a Bahraini medical import and export company that has been running since 1996. The heartbeat line draws the M of the monogram, and we designed the company profile around it.",
       "media": [
         {
           "type": "image",
@@ -76,7 +76,7 @@
         {
           "type": "image",
           "url": "images/creative/branding/manama-medical/profile-cover.jpg",
-          "caption": "Company profile — cover"
+          "caption": "Company profile cover"
         },
         {
           "type": "image",
@@ -120,7 +120,7 @@
       "title": "Yunus Factory",
       "category": "branding",
       "order": 230,
-      "description": "Identity for a design–engineer–build firm — an abstract mark cut from two offset parallelograms, resolved on a construction grid and carried across signage, site gear and stationery.",
+      "description": "Identity for a design, engineer and build firm. The mark is cut from two offset parallelograms, worked out on a construction grid, then carried across signage, site gear and stationery.",
       "media": [
         {
           "type": "image",
@@ -151,11 +151,11 @@
     },
     {
       "slug": "doponda-creative-solutions",
-      "title": "Doponda — Creative Solutions",
+      "title": "Doponda Creative Solutions",
       "category": "branding",
       "year": 2023,
       "order": 220,
-      "description": "The full brand guideline for the creative agency I co-founded — a wave mark drawn on the golden ratio, an English and Arabic type system, colour rules, and the stationery it lands on.",
+      "description": "The full brand guideline for the creative agency I co-founded. A wave mark drawn on the golden ratio, an English and Arabic type system, colour rules, and the stationery it all lands on.",
       "media": [
         {
           "type": "image",
@@ -200,7 +200,7 @@
         {
           "type": "image",
           "url": "images/creative/branding/doponda-creative-solutions/guideline-intro.jpg",
-          "caption": "Brand guideline — opening pages"
+          "caption": "Brand guideline, opening pages"
         },
         {
           "type": "image",
@@ -220,27 +220,27 @@
       "category": "experiments",
       "year": 2025,
       "order": 210,
-      "description": "Stepping in front of the camera instead of behind it — editorial studio work and lifestyle campaign shoots for the hotel. Being the subject changed how I direct one: you feel very quickly what a brief asks of the person in frame.",
+      "description": "Stepping in front of the camera instead of behind it, on editorial studio work and lifestyle campaign shoots for the hotel. Being the subject changed how I direct one. You feel very quickly what a brief asks of the person in frame.",
       "media": [
         {
           "type": "image",
           "url": "images/creative/modeling/hotel-artwork-standing.jpg",
-          "caption": "Hotel lifestyle campaign — gallery wall"
+          "caption": "Hotel campaign, gallery wall"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/hotel-lobby-artwork.jpg",
-          "caption": "Hotel lifestyle campaign — lobby"
+          "caption": "Hotel campaign, lobby"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/hotel-gallery-walk.jpg",
-          "caption": "Hotel lifestyle campaign — art walk"
+          "caption": "Hotel campaign, art walk"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/hotel-lounge-reading.jpg",
-          "caption": "Hotel lifestyle campaign — lounge"
+          "caption": "Hotel campaign, lounge"
         },
         {
           "type": "image",
@@ -255,7 +255,7 @@
         {
           "type": "image",
           "url": "images/creative/modeling/restaurant-dining-wide.jpg",
-          "caption": "Restaurant lifestyle shoot — wide"
+          "caption": "Restaurant shoot, wide"
         },
         {
           "type": "image",
@@ -265,12 +265,12 @@
         {
           "type": "image",
           "url": "images/creative/modeling/business-lunch-meeting.jpg",
-          "caption": "Business lunch campaign — meeting"
+          "caption": "Business lunch campaign, meeting"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/business-lunch-table.jpg",
-          "caption": "Business lunch campaign — table detail"
+          "caption": "Business lunch campaign, table detail"
         },
         {
           "type": "image",
@@ -290,27 +290,49 @@
         {
           "type": "image",
           "url": "images/creative/modeling/studio-lighting-bts.jpg",
-          "caption": "On set — lighting and crew"
+          "caption": "On set with the lighting crew"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/portrait-winter.jpg",
-          "caption": "On location — winter"
+          "caption": "On location in winter"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/portrait-park.jpg",
-          "caption": "On location — park"
+          "caption": "On location at the park"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/portrait-cafe.jpg",
-          "caption": "On location — cafe"
+          "caption": "On location at a cafe"
         },
         {
           "type": "image",
           "url": "images/creative/modeling/portrait-bookshop.jpg",
-          "caption": "On location — bookshop"
+          "caption": "On location in a bookshop"
+        }
+      ]
+    },
+    {
+      "slug": "wrwr-podcast",
+      "title": "WRWR podcast",
+      "category": "experiments",
+      "year": 2024,
+      "order": 205,
+      "description": "The podcast the WRWR brand was built for, out in the world. An Arabic show that digs into a subject and keeps it light. Here is an episode to watch and the channel to follow.",
+      "media": [
+        {
+          "type": "link",
+          "url": "https://youtu.be/-4hw0zQGk-c?si=bX1EGL0x5WgSc8w0",
+          "caption": "Watch a full episode",
+          "thumb": "https://img.youtube.com/vi/-4hw0zQGk-c/maxresdefault.jpg"
+        },
+        {
+          "type": "link",
+          "url": "https://www.instagram.com/wrwrchannel/",
+          "caption": "The channel on Instagram",
+          "thumb": "images/creative/branding/wrwr/mark.jpg"
         }
       ]
     },
@@ -320,7 +342,7 @@
       "category": "branding",
       "year": 2024,
       "order": 200,
-      "description": "Brand and pitch deck for a wedding expo at Exhibition World Bahrain — a monogram, an editorial layout system and the exhibitor-facing profile that sold the show.",
+      "description": "Brand and pitch deck for a wedding expo at Exhibition World Bahrain. A monogram, an editorial layout system, and the exhibitor profile that sold the show.",
       "media": [
         {
           "type": "image",
@@ -350,7 +372,7 @@
       "category": "branding",
       "year": 2024,
       "order": 190,
-      "description": "Brand for an Arabic podcast — a jackhammer mic that digs into the subject, in coral and sea green, with the bilingual tagline lockup that carries it.",
+      "description": "Brand for an Arabic podcast. A jackhammer mic that digs into the subject, coral and sea green throughout, and a bilingual tagline lockup to carry it.",
       "media": [
         {
           "type": "image",
@@ -387,7 +409,7 @@
       "category": "branding",
       "year": 2023,
       "order": 180,
-      "description": "Branding guide for a bilingual retail concept — an illustrated mark with Arabic and Latin lockups, applied across storefront, packaging and print.",
+      "description": "Branding guide for a bilingual retail concept. An illustrated mark with Arabic and Latin lockups, applied across storefront, packaging and print.",
       "media": [
         {
           "type": "image",
@@ -457,7 +479,7 @@
       "category": "branding",
       "year": 2023,
       "order": 160,
-      "description": "Corporate identity for a group holding company — a layered wordmark, a deep blue palette and a diagonal pattern system for corporate collateral.",
+      "description": "Corporate identity for a group holding company. A layered wordmark, a deep blue palette, and a diagonal pattern system for the collateral.",
       "media": [
         {
           "type": "image",
@@ -492,7 +514,7 @@
       "category": "branding",
       "year": 2023,
       "order": 150,
-      "description": "Identity for a burger concept named after the Maillard reaction — a flame-and-grill emblem, a mustard and char palette, and packaging built for takeaway.",
+      "description": "Identity for a burger concept named after the Maillard reaction. A flame and grill emblem, a mustard and char palette, and packaging built for takeaway.",
       "media": [
         {
           "type": "image",
@@ -512,7 +534,7 @@
       "category": "branding",
       "year": 2022,
       "order": 140,
-      "description": "Brand guide for a cosmetics retailer — a playful monogram, a pastel palette and a pattern language that runs from storefront to packaging to loyalty cards.",
+      "description": "Brand guide for a cosmetics retailer. A playful monogram, a pastel palette, and a pattern language that runs from storefront to packaging to loyalty cards.",
       "media": [
         {
           "type": "image",
@@ -552,7 +574,7 @@
       "category": "branding",
       "year": 2022,
       "order": 130,
-      "description": "Logo and brand guidelines for a vape retailer — a neon-leaning mark designed to hold up lit, on signage and billboards as well as on paper.",
+      "description": "Logo and brand guidelines for a vape retailer. The mark leans neon so it holds up lit, on signage and billboards as well as on paper.",
       "media": [
         {
           "type": "image",
@@ -592,32 +614,32 @@
       "category": "branding",
       "year": 2022,
       "order": 120,
-      "description": "Label and packaging design across a range of e-liquid brands — flavour artwork, bottle wraps and cartons, each carrying the bilingual regulatory panels the category requires.",
+      "description": "Label and packaging design across a range of e-liquid brands. Flavour artwork, bottle wraps and cartons, each carrying the bilingual regulatory panels the category requires.",
       "media": [
         {
           "type": "image",
           "url": "images/creative/branding/e-liquid-labels/purple-tropical.jpg",
-          "caption": "Purple — tropical fruit"
+          "caption": "Purple, tropical fruit"
         },
         {
           "type": "image",
           "url": "images/creative/branding/e-liquid-labels/eagle-boom.jpg",
-          "caption": "Eagle Boom — watermelon ice"
+          "caption": "Eagle Boom, watermelon ice"
         },
         {
           "type": "image",
           "url": "images/creative/branding/e-liquid-labels/solo-neon-grape.jpg",
-          "caption": "Solo — neon grape"
+          "caption": "Solo, neon grape"
         },
         {
           "type": "image",
           "url": "images/creative/branding/e-liquid-labels/play-juice.jpg",
-          "caption": "Play Juice — bottles and label artwork"
+          "caption": "Play Juice bottles and label artwork"
         },
         {
           "type": "image",
           "url": "images/creative/branding/e-liquid-labels/graffiti-watermelon.jpg",
-          "caption": "Graffiti — watermelon"
+          "caption": "Graffiti, watermelon"
         },
         {
           "type": "image",
@@ -632,7 +654,7 @@
       "category": "branding",
       "year": 2022,
       "order": 110,
-      "description": "Identity for a fashion label — a script wordmark set inside a diamond frame, with construction grid, palette and pattern worked out on a single brand board.",
+      "description": "Identity for a fashion label. A script wordmark set inside a diamond frame, with the construction grid, palette and pattern worked out on a single brand board.",
       "media": [
         {
           "type": "image",
@@ -652,7 +674,7 @@
       "category": "branding",
       "year": 2022,
       "order": 100,
-      "description": "Identity for a boutique label — a fine-line serif wordmark, a botanical illustration set and a muted rose palette applied to packaging.",
+      "description": "Identity for a boutique label. A fine line serif wordmark, a botanical illustration set, and a muted rose palette applied to packaging.",
       "media": [
         {
           "type": "image",
@@ -667,7 +689,7 @@
       "category": "branding",
       "year": 2022,
       "order": 90,
-      "description": "Logo and brand guidelines for a customs clearing and logistics firm — a circular monogram built to read at signage scale, applied to facade, stationery and merchandise.",
+      "description": "Logo and brand guidelines for a customs clearing and logistics firm. The circular monogram is built to read at signage scale, and it runs across the facade, stationery and merchandise.",
       "media": [
         {
           "type": "image",
@@ -712,7 +734,7 @@
       "category": "branding",
       "year": 2022,
       "order": 80,
-      "description": "Identity for a party organising and equipment rental company — an illustrated character mark in an electric palette, built for nightlife and social.",
+      "description": "Identity for a party organising and equipment rental company. An illustrated character mark in an electric palette, built for nightlife and social.",
       "media": [
         {
           "type": "image",
@@ -743,11 +765,11 @@
     },
     {
       "slug": "diva-primrose",
-      "title": "Diva Hotel — Learning & Development",
+      "title": "Diva Hotel Learning & Development",
       "category": "branding",
       "year": 2022,
       "order": 70,
-      "description": "Two crest marks for a hotel group's training arm: Learning & Development and Primrose Activities, applied to interior signage and appreciation certificates.",
+      "description": "Two crest marks for a hotel group's training arm, Learning & Development and Primrose Activities, applied to interior signage and appreciation certificates.",
       "media": [
         {
           "type": "image",
@@ -787,7 +809,7 @@
       "category": "branding",
       "year": 2022,
       "order": 60,
-      "description": "Brand guide for a Bahraini online ticketing platform — a ticket-stub mark with a torn-edge device carried through the identity and campaign work.",
+      "description": "Brand guide for a Bahraini online ticketing platform. A ticket stub mark with a torn edge device, carried through the identity and the campaign work.",
       "media": [
         {
           "type": "image",
@@ -817,7 +839,7 @@
       "category": "branding",
       "year": 2022,
       "order": 50,
-      "description": "Identity for a medical supply company — a wordmark whose Q carries a cross-and-vial mark, worked up in red, blue and reversed across its applications.",
+      "description": "Identity for a medical supply company. The Q carries a cross and vial mark, worked up in red, blue and reversed across its applications.",
       "media": [
         {
           "type": "image",
@@ -828,11 +850,11 @@
     },
     {
       "slug": "mims",
-      "title": "MIMS — event campaign",
+      "title": "MIMS event campaign",
       "category": "branding",
       "year": 2022,
       "order": 40,
-      "description": "Campaign artwork for an international artist night in Bahrain — key visual, social cut and the hanging banner that ran in venue.",
+      "description": "Campaign artwork for an international artist night in Bahrain. Key visual, social cut, and the hanging banner that ran in the venue.",
       "media": [
         {
           "type": "image",
@@ -857,7 +879,7 @@
       "category": "experiments",
       "year": 2023,
       "order": 30,
-      "description": "Murals and painting — where the whole thing started, before the Adobe suite and the brand guidelines. More work to be added here.",
+      "description": "Murals and painting. This is where the whole thing started, before the Adobe suite and the brand guidelines. More work to be added here.",
       "media": [
         {
           "type": "image",
@@ -872,7 +894,7 @@
       "category": "branding",
       "year": 2021,
       "order": 20,
-      "description": "A newborn announcement suite — a calligraphic monogram of the name Adam set in watercolour botanicals.",
+      "description": "A newborn announcement suite. A calligraphic monogram of the name Adam, set in watercolour botanicals.",
       "media": [
         {
           "type": "image",
@@ -892,7 +914,7 @@
       "category": "branding",
       "year": 2026,
       "order": 10,
-      "description": "A newborn's arrival, branded end to end — an Arabic calligraphy name mark set against watercolour delphiniums, carried through the welcome table, favours, door hanger and announcement.",
+      "description": "A newborn's arrival, branded end to end. An Arabic calligraphy name mark against watercolour delphiniums, carried through the welcome table, favours, door hanger and announcement.",
       "media": [
         {
           "type": "image",

@@ -41,6 +41,12 @@ Check on a deploy with:
 gh api repos/haniyar27/Hani-portfolio/pages/builds --jq '.[0] | {status, created_at, error: .error.message}'
 ```
 
+Pages serves everything with a ten-minute cache, so `css/style.css` and the
+scripts are linked with a `?v=` token. **Bump that token in every HTML file
+whenever you change the CSS or JS**, or returning visitors keep the old copy
+and your change looks like it never deployed. Content JSON is exempt: it is
+fetched with `cache: 'no-store'`, so text edits show up immediately.
+
 One rule keeps this working: **internal links stay relative and keep the
 `.html` extension** — `experience.html`, never `/experience` or a full
 `https://…` URL. That way the site works from the domain root and from a

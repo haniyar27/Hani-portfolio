@@ -117,10 +117,10 @@ async function renderExperienceDetail(){
   const item = rows.find(r => r.slug === id) || rows[0];
   if (!item){ el.innerHTML = emptyState('Entry not found.'); return; }
 
-  document.title = `${item.company} — Hani Abbas`;
+  document.title = `${item.company} | Hani Abbas`;
   let html = `
     <div class="detail-header">
-      <div class="company">${item.company} — ${fmtRange(item.startDate, item.endDate)}</div>
+      <div class="company">${item.company}, ${fmtRange(item.startDate, item.endDate)}</div>
       <h1>${item.role}</h1>
     </div>
     <ul class="bullet-list">${(item.bullets||[]).map(b=>`<li>${b}</li>`).join('')}</ul>
@@ -177,7 +177,7 @@ function paintProjects(filter){
       <div class="project-card">
         <div class="thumb" onclick='openProject(${JSON.stringify(p.slug)})'>${thumb}</div>
         <div class="body">
-          <div class="cat">${labelFor(p.category)}${p.year ? ' — ' + p.year : ''}</div>
+          <div class="cat">${labelFor(p.category)}${p.year ? ', ' + p.year : ''}</div>
           <h3>${p.title}</h3>
           <p>${p.description || ''}</p>
         </div>
@@ -238,7 +238,7 @@ function openProject(slug){
     <button class="gallery-close" aria-label="Close gallery">&times;</button>
     <div class="gallery-inner">
       <div class="gallery-head">
-        <div class="cat">${labelFor(p.category)}${p.year ? ' — ' + p.year : ''}</div>
+        <div class="cat">${labelFor(p.category)}${p.year ? ', ' + p.year : ''}</div>
         <h2>${p.title}</h2>
         ${p.description ? `<p>${p.description}</p>` : ''}
         <div class="gallery-count">${p.media.length} ${p.media.length === 1 ? 'frame' : 'frames'}</div>
