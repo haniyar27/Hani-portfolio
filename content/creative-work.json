@@ -230,6 +230,11 @@
           "type": "image",
           "url": "images/creative/branding/doponda/brand-board.jpg",
           "caption": "Brand board"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/doponda/campaign.jpg",
+          "caption": "Campaign artwork"
         }
       ]
     },
@@ -357,6 +362,388 @@
           "type": "image",
           "url": "images/creative/modeling/portrait-bookshop.jpg",
           "caption": "On location — bookshop"
+        }
+      ]
+    },
+    {
+      "slug": "wab-clearing",
+      "title": "W.A.B Clearing",
+      "category": "branding",
+      "year": 2022,
+      "description": "Logo and brand guidelines for a customs clearing and logistics firm — a circular monogram built to read at signage scale, applied to facade, stationery and merchandise.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/cover.jpg",
+          "caption": "Logo and brand guidelines"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/brand-story.jpg",
+          "caption": "Brand story"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/logo-versions.jpg",
+          "caption": "Logo versions"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/facade.jpg",
+          "caption": "Facade signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/stationery.jpg",
+          "caption": "Stationery"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wab-clearing/leather-patch.jpg",
+          "caption": "Merchandise"
+        }
+      ]
+    },
+    {
+      "slug": "the-organizer",
+      "title": "The Organizer",
+      "category": "branding",
+      "year": 2022,
+      "description": "Identity for a party organising and equipment rental company — an illustrated character mark in an electric palette, built for nightlife and social.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/the-organizer/logo.jpg",
+          "caption": "Logo"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/the-organizer/logo-versions.jpg",
+          "caption": "Logo versions"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/the-organizer/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/the-organizer/business-cards.jpg",
+          "caption": "Business cards"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/the-organizer/mark.jpg",
+          "caption": "Mark on dark"
+        }
+      ]
+    },
+    {
+      "slug": "premax-group",
+      "title": "Premax Group",
+      "category": "branding",
+      "year": 2023,
+      "description": "Corporate identity for a group holding company — a layered wordmark, a deep blue palette and a diagonal pattern system for corporate collateral.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/premax-group/cover.jpg",
+          "caption": "Brand guidelines"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/premax-group/logo-versions.jpg",
+          "caption": "Logo versions"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/premax-group/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/premax-group/patterns.jpg",
+          "caption": "Patterns"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/premax-group/mark.jpg",
+          "caption": "Mark"
+        }
+      ]
+    },
+    {
+      "slug": "diva-primrose",
+      "title": "Diva Hotel — Learning & Development",
+      "category": "branding",
+      "year": 2022,
+      "description": "Two crest marks for a hotel group's training arm: Learning & Development and Primrose Activities, applied to interior signage and appreciation certificates.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/cover.jpg",
+          "caption": "Logo set"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/learning-development.jpg",
+          "caption": "Learning & Development"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/primrose-activities.jpg",
+          "caption": "Primrose Activities"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/signage.jpg",
+          "caption": "Interior signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/wall-signage.jpg",
+          "caption": "Wall signage"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/diva-primrose/certificate.jpg",
+          "caption": "Certificate of appreciation"
+        }
+      ]
+    },
+    {
+      "slug": "wrwr",
+      "title": "WRWR",
+      "category": "branding",
+      "year": 2024,
+      "description": "Brand and sponsor profile for an Arabic podcast — a retro broadcast identity in coral and sea green, with the deck that sells the show's sponsorship slots.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/wrwr/cover.jpg",
+          "caption": "Podcast brand"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wrwr/tagline.jpg",
+          "caption": "Tagline"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wrwr/identity.jpg",
+          "caption": "Identity"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wrwr/sponsor-slots.jpg",
+          "caption": "Sponsorship slots"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/wrwr/mark.jpg",
+          "caption": "Mark"
+        }
+      ]
+    },
+    {
+      "slug": "ticketaty",
+      "title": "Ticketaty",
+      "category": "branding",
+      "year": 2022,
+      "description": "Brand guide for a Bahraini online ticketing platform — a ticket-stub mark with a torn-edge device carried through the identity and campaign work.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/ticketaty/brand-guide.jpg",
+          "caption": "Brand guide"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/ticketaty/logo-versions.jpg",
+          "caption": "Logo versions"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/ticketaty/palette.jpg",
+          "caption": "Colour palette"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/ticketaty/hotels-campaign.jpg",
+          "caption": "Hotels campaign"
+        }
+      ]
+    },
+    {
+      "slug": "maillard-burger",
+      "title": "Maillard Burger",
+      "category": "branding",
+      "year": 2023,
+      "description": "Identity for a burger concept named after the Maillard reaction — a flame-and-grill emblem, a mustard and char palette, and packaging built for takeaway.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/maillard-burger/brand-board.jpg",
+          "caption": "Brand board"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/maillard-burger/logo.jpg",
+          "caption": "Logo"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/maillard-burger/applications.jpg",
+          "caption": "Applications"
+        }
+      ]
+    },
+    {
+      "slug": "dolma-bites",
+      "title": "Dolma Bites",
+      "category": "branding",
+      "year": 2023,
+      "description": "Identity for a bilingual food brand — a folded-leaf mark with Arabic and Latin lockups, a sage and terracotta palette, and a pattern for packaging.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/dolma-bites/brand-board.jpg",
+          "caption": "Brand board"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dolma-bites/packaging.jpg",
+          "caption": "Packaging"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/dolma-bites/identity.jpg",
+          "caption": "Identity"
+        }
+      ]
+    },
+    {
+      "slug": "qteb",
+      "title": "QTEB Medical",
+      "category": "branding",
+      "year": 2022,
+      "description": "Logo exploration for a medical supply company — several routes worked up in full, from a vial-and-cross mark to a pulse-line wordmark.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/qteb/concept-1.jpg",
+          "caption": "Concept one"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/qteb/concept-2.jpg",
+          "caption": "Concept two"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/qteb/concept-3.jpg",
+          "caption": "Concept three"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/qteb/logo-explorations.jpg",
+          "caption": "Logo explorations"
+        }
+      ]
+    },
+    {
+      "slug": "mims",
+      "title": "MIMS — event campaign",
+      "category": "branding",
+      "year": 2022,
+      "description": "Campaign artwork for an international artist night in Bahrain — key visual, social cut and the hanging banner that ran in venue.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/mims/social-post.jpg",
+          "caption": "Social post"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/mims/banner.jpg",
+          "caption": "In-venue banner"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/mims/artwork.jpg",
+          "caption": "Key visual"
+        }
+      ]
+    },
+    {
+      "slug": "play-juice",
+      "title": "Play Juice",
+      "category": "branding",
+      "year": 2022,
+      "description": "Label design for an e-liquid range — a playful character system per flavour, with the bilingual regulatory panels the category requires.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/play-juice/bottles.jpg",
+          "caption": "Bottle labels"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/play-juice/purple-tropical.jpg",
+          "caption": "Flavour artwork"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/play-juice/label-variants.jpg",
+          "caption": "Label variants"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/play-juice/graffiti-labels.jpg",
+          "caption": "Graffiti range"
+        }
+      ]
+    },
+    {
+      "slug": "ali-favours",
+      "title": "Ali — event favours",
+      "category": "branding",
+      "year": 2025,
+      "description": "Arabic calligraphy and botanical labels for event favours — a circular seal and bottle wraps built to print small and read clean.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/ali-favours/label.jpg",
+          "caption": "Favour label"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/ali-favours/bottle-labels.jpg",
+          "caption": "Bottle wraps"
+        }
+      ]
+    },
+    {
+      "slug": "baby-adam",
+      "title": "Baby Adam",
+      "category": "branding",
+      "year": 2021,
+      "description": "A newborn announcement suite — a calligraphic monogram of the name Adam set in watercolour botanicals.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-adam/monogram.jpg",
+          "caption": "Monogram"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-adam/announcement.jpg",
+          "caption": "Announcement"
         }
       ]
     }
