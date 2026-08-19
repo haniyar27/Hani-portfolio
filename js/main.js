@@ -132,9 +132,13 @@ function renderMedia(item){
     if (embed) {
       inner.innerHTML = `<iframe src="${embed}" title="${item.caption || 'Video'}" allow="autoplay; encrypted-media" allowfullscreen></iframe>${cap}`;
     } else {
+      // a link with a preview image shows it above the call to action
+      let host = '';
+      try { host = new URL(item.url).hostname.replace('www.',''); } catch(e){}
       inner.innerHTML = `
-        <div class="link-card">
-          <div class="link-card-label">External link</div>
+        <div class="link-card${item.thumb ? ' has-thumb' : ''}">
+          ${item.thumb ? `<img class="link-card-thumb" src="${item.thumb}" alt="${item.caption || ''}" onerror="this.style.display='none'">` : ''}
+          <div class="link-card-label">${host || 'External link'}</div>
           <p>${item.caption || item.url}</p>
           <a class="btn btn-solid" href="${item.url}" target="_blank" rel="noopener">Open link ↗</a>
         </div>`;

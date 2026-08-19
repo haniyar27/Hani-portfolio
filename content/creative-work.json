@@ -350,7 +350,7 @@
       "category": "branding",
       "year": 2024,
       "order": 190,
-      "description": "Brand and sponsor profile for an Arabic podcast — a retro broadcast identity in coral and sea green, with the deck that sells the show's sponsorship slots.",
+      "description": "Brand for an Arabic podcast — a jackhammer mic that digs into the subject, in coral and sea green, with the bilingual tagline lockup that carries it.",
       "media": [
         {
           "type": "image",
@@ -364,18 +364,20 @@
         },
         {
           "type": "image",
-          "url": "images/creative/branding/wrwr/identity.jpg",
-          "caption": "Identity"
-        },
-        {
-          "type": "image",
-          "url": "images/creative/branding/wrwr/sponsor-slots.jpg",
-          "caption": "Sponsorship slots"
-        },
-        {
-          "type": "image",
           "url": "images/creative/branding/wrwr/mark.jpg",
           "caption": "Mark"
+        },
+        {
+          "type": "link",
+          "url": "https://youtu.be/-4hw0zQGk-c?si=bX1EGL0x5WgSc8w0",
+          "caption": "Watch a full episode",
+          "thumb": "https://img.youtube.com/vi/-4hw0zQGk-c/maxresdefault.jpg"
+        },
+        {
+          "type": "link",
+          "url": "https://www.instagram.com/wrwrchannel/",
+          "caption": "The channel on Instagram",
+          "thumb": "images/creative/branding/wrwr/mark.jpg"
         }
       ]
     },

@@ -28,8 +28,27 @@ async function loadList(path){
   return Array.isArray(data) ? data : (data.items || []);
 }
 
+function hostOf(url){
+  try { return new URL(url).hostname.replace('www.',''); } catch(e){ return ''; }
+}
+
+/* an external link is labelled by where it goes — "Watch" for a video
+   host, the network's name otherwise. */
+function linkLabel(url){
+  const h = hostOf(url);
+  if (/youtu\.be|youtube\.com|vimeo\.com/.test(h)) return 'Watch';
+  if (/instagram\.com/.test(h)) return 'Instagram';
+  if (/linkedin\.com/.test(h)) return 'LinkedIn';
+  return 'Link';
+}
+
+function tagFor(item){
+  if (item.type === 'link') return linkLabel(item.url);
+  return { image:'Photo', video:'Video', pdf:'PDF' }[item.type] || 'Media';
+}
+
 function mediaTile(item){
-  const tagLabel = { image:'Photo', video:'Video', pdf:'PDF', link:'Watch' }[item.type] || 'Media';
+  const tagLabel = tagFor(item);
   // entity-encode the payload: a caption containing an apostrophe would
   // otherwise close the attribute and swallow the rest of the tile
   const call = `openMedia(${JSON.stringify(item).replace(/"/g, '&quot;')})`;
@@ -43,11 +62,17 @@ function mediaTile(item){
       <span class="tag">${tagLabel}</span><video src="${item.url}" muted preload="metadata"></video>
     </div>`;
   }
-  let domain = '';
-  try { domain = new URL(item.url).hostname.replace('www.',''); } catch(e){ domain = item.type.toUpperCase(); }
+  // a link can carry its own preview image; without one it falls back to
+  // a card naming the destination
+  if (item.thumb) {
+    return `<div class="media-tile" onclick="${call}">
+      <span class="tag">${tagLabel}</span>
+      <img src="${item.thumb}" alt="${item.caption||''}" loading="lazy" onerror="this.style.display='none'">
+    </div>`;
+  }
   return `<div class="media-tile link-tile" onclick="${call}">
     <span class="tag">${tagLabel}</span>
-    <span class="domain">${domain}</span>
+    <span class="domain">${hostOf(item.url) || item.type.toUpperCase()}</span>
     <span class="title">${item.caption || 'View'}</span>
   </div>`;
 }
@@ -144,9 +169,9 @@ function paintProjects(filter){
     const thumb = cover
       ? (cover.type === 'video'
           ? `<video src="${cover.url}" muted preload="metadata"></video>`
-          : cover.type === 'image'
-            ? `<img src="${cover.url}" alt="${p.title}" loading="lazy">`
-            : `<div class="link-tile" style="height:100%;justify-content:center;align-items:center;"><span class="tag">${cover.type.toUpperCase()}</span></div>`)
+          : (cover.type === 'image' || cover.thumb)
+            ? `<img src="${cover.thumb || cover.url}" alt="${p.title}" loading="lazy">`
+            : `<div class="link-tile" style="height:100%;justify-content:center;align-items:center;"><span class="tag">${tagFor(cover)}</span></div>`)
       : '';
     return `
       <div class="project-card">
@@ -162,6 +187,28 @@ function paintProjects(filter){
 function labelFor(cat){
   return { branding:'Branding & Identity', media:'Media', experiments:'Experiments' }[cat] || cat;
 }
+/* What a contact-sheet cell shows. A link points at another site, so it
+   has no file to display — it shows its own thumb, or a card naming the
+   destination, never a broken <img>. */
+function galleryThumbFace(item, fallbackTitle){
+  const alt = item.caption || fallbackTitle;
+  if (item.type === 'video') return `<video src="${item.url}" muted preload="metadata"></video>`;
+  if (item.type === 'link' || item.type === 'pdf') {
+    const label = tagFor(item);
+    // the preview is usually the project's own artwork, so the badge is what
+    // tells a viewer this cell leaves the site rather than opening a picture
+    if (item.thumb) {
+      return `<span class="thumb-badge">${label === 'Watch' ? '▶ ' : ''}${label}</span>
+        <img src="${item.thumb}" alt="${alt}" loading="lazy" onerror="this.style.display='none'">`;
+    }
+    return `<span class="thumb-link">
+      <span class="domain">${hostOf(item.url) || item.type.toUpperCase()}</span>
+      <span class="title">${alt}</span>
+    </span>`;
+  }
+  return `<img src="${item.url}" alt="${alt}" loading="lazy">`;
+}
+
 /* A project opens as a contact sheet of everything in it; picking a frame
    hands off to the lightbox, which already knows how to page through the
    same list. */
@@ -200,9 +247,7 @@ function openProject(slug){
         ${p.media.map((mItem, i) => `
           <button class="gallery-thumb" type="button" aria-label="${mItem.caption || p.title}"
                   onclick="openGallery(${JSON.stringify(p.media).replace(/"/g, '&quot;')}, ${i})">
-            ${mItem.type === 'video'
-              ? `<video src="${mItem.url}" muted preload="metadata"></video>`
-              : `<img src="${mItem.url}" alt="${mItem.caption || p.title}" loading="lazy">`}
+            ${galleryThumbFace(mItem, p.title)}
           </button>`).join('')}
       </div>
     </div>`;

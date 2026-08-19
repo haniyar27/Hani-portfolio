@@ -692,7 +692,14 @@ footer{
   overflow:hidden;
   transition:transform .24s var(--pop);
 }
+.gallery-thumb{ position:relative; }
 .gallery-thumb:hover{ transform:translate(-3px,-5px); }
+.thumb-badge{
+  position:absolute; top:12px; left:12px; z-index:2; line-height:1;
+  font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  background:var(--bone); color:var(--ink);
+  border:2px solid var(--ink); border-radius:99px; padding:5px 11px;
+}
 .gallery-thumb img, .gallery-thumb video{ width:100%; height:auto; display:block; }
 .gallery-close{
   position:fixed; top:22px; right:26px; z-index:2;
@@ -750,6 +757,24 @@ footer{
   color:var(--orange); margin-bottom:14px;
 }
 .link-card p{ margin:0 0 24px; }
+.link-card.has-thumb{ padding:20px 20px 32px; }
+.link-card-thumb{
+  display:block; width:100%; max-height:46vh; object-fit:cover;
+  border:2px solid var(--ink); border-radius:12px; margin-bottom:22px;
+}
+
+/* contact-sheet cell for a link with no preview image of its own */
+.thumb-link{
+  display:flex; flex-direction:column; justify-content:flex-end; gap:6px;
+  width:100%; height:100%; padding:16px; background:var(--peri); text-align:left;
+}
+.thumb-link .domain{
+  font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-mute);
+}
+.thumb-link .title{
+  font-family:var(--font-display); font-weight:800; font-size:16px;
+  letter-spacing:-.02em; line-height:1.15;
+}
 
 .lightbox-close{
   position:absolute; top:22px; right:26px;
