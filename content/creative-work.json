@@ -815,12 +815,12 @@
       "category": "branding",
       "year": 2022,
       "order": 50,
-      "description": "Logo exploration for a medical supply company — several routes worked up in full, from a vial-and-cross mark to a pulse-line wordmark.",
+      "description": "Identity for a medical supply company — a wordmark whose Q carries a cross-and-vial mark, worked up in red, blue and reversed across its applications.",
       "media": [
         {
           "type": "image",
-          "url": "images/creative/branding/qteb/concept-3.jpg",
-          "caption": "Concept three"
+          "url": "images/creative/branding/qteb/brand-board.jpg",
+          "caption": "Brand board"
         }
       ]
     },
@@ -885,22 +885,62 @@
       ]
     },
     {
-      "slug": "ali-favours",
-      "title": "Ali — event favours",
+      "slug": "baby-ali",
+      "title": "Baby Ali",
       "category": "branding",
-      "year": 2025,
+      "year": 2026,
       "order": 10,
-      "description": "Arabic calligraphy and botanical labels for event favours — a circular seal and bottle wraps built to print small and read clean.",
+      "description": "A newborn's arrival, branded end to end — an Arabic calligraphy name mark set against watercolour delphiniums, carried through the welcome table, favours, door hanger and announcement.",
       "media": [
         {
           "type": "image",
-          "url": "images/creative/branding/ali-favours/label.jpg",
-          "caption": "Favour label"
+          "url": "images/creative/branding/baby-ali/name-mark.jpg",
+          "caption": "Name mark"
         },
         {
           "type": "image",
-          "url": "images/creative/branding/ali-favours/bottle-labels.jpg",
-          "caption": "Bottle wraps"
+          "url": "images/creative/branding/baby-ali/welcome-table.jpg",
+          "caption": "Welcome table"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/table-wide.jpg",
+          "caption": "The full setup"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/sign-and-favours.jpg",
+          "caption": "Calligraphy sign and favour table"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/honey-favours.jpg",
+          "caption": "Honey favours"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/favour-jars.jpg",
+          "caption": "Tagged jars"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/favour-tag.jpg",
+          "caption": "Favour tag artwork"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/bottle-wraps.jpg",
+          "caption": "Bottle wrap artwork"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/door-hanger.jpg",
+          "caption": "Door hanger"
+        },
+        {
+          "type": "image",
+          "url": "images/creative/branding/baby-ali/announcement.jpg",
+          "caption": "Announcement card"
         }
       ]
     }
