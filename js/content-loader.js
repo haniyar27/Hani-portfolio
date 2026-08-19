@@ -122,7 +122,9 @@ async function renderCreativeWork(){
   if (!grid) return;
   allProjects = await loadList('content/creative-work.json');
   if (!allProjects.length){ grid.innerHTML = emptyState('No projects yet.'); return; }
-  allProjects.sort((a,b)=> (b.year||0) - (a.year||0));
+  // explicit `order` drives the sequence (higher shows first); year is
+  // only the tie-break, so a project can be moved without faking its date
+  allProjects.sort((a,b)=> ((b.order||0) - (a.order||0)) || ((b.year||0) - (a.year||0)));
   paintProjects('all');
 
   document.querySelectorAll('.filter-btn').forEach(btn=>{

@@ -340,21 +340,16 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
   white-space:nowrap;
 }
 
-/* ---------- marquee ---------- */
-.marquee{
+/* ---------- snake band ----------
+   The strip under the hero. Same black cut the word marquee used to
+   occupy; the animation itself lives in js/snake-band.js. */
+.snake-band{
   border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
-  background:var(--ink); color:var(--bone);
-  overflow:hidden; padding:16px 0; margin-top:clamp(30px, 5vw, 60px);
-  display:flex; white-space:nowrap;
+  background:var(--ink);
+  overflow:hidden; margin-top:clamp(30px, 5vw, 60px);
+  height:clamp(56px, 7vw, 78px);
 }
-.marquee-track{
-  display:flex; align-items:center; gap:34px; flex:none; padding-right:34px;
-  font-family:var(--font-display); font-weight:900;
-  font-size:clamp(18px, 2.3vw, 28px); letter-spacing:-.02em; text-transform:uppercase;
-  animation:slide 26s linear infinite;
-}
-.marquee-track .dot{ color:var(--orange); }
-@keyframes slide{ from{ transform:translateX(0); } to{ transform:translateX(-100%); } }
+.snake-band canvas{ display:block; width:100%; height:100%; }
 
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns:1fr; gap:0; }

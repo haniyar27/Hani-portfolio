@@ -63,23 +63,8 @@
 
   </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Brand Strategy</span><span class="dot">✱</span>
-      <span>Creative Direction</span><span class="dot">✱</span>
-      <span>Hospitality</span><span class="dot">✱</span>
-      <span>Retail</span><span class="dot">✱</span>
-      <span>B2B Events</span><span class="dot">✱</span>
-      <span>Bahrain</span><span class="dot">✱</span>
-    </div>
-    <div class="marquee-track">
-      <span>Brand Strategy</span><span class="dot">✱</span>
-      <span>Creative Direction</span><span class="dot">✱</span>
-      <span>Hospitality</span><span class="dot">✱</span>
-      <span>Retail</span><span class="dot">✱</span>
-      <span>B2B Events</span><span class="dot">✱</span>
-      <span>Bahrain</span><span class="dot">✱</span>
-    </div>
+  <div class="snake-band" aria-hidden="true">
+    <canvas id="snake-canvas"></canvas>
   </div>
 </section>
 
@@ -142,5 +127,6 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 <script src="js/content-loader.js"></script>
+<script src="js/snake-band.js"></script>
 </body>
 </html>
