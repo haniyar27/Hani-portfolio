@@ -70,8 +70,14 @@ Every media item follows the same shape:
 ```
 
 `type: "link"` is for pasted URLs — YouTube and Vimeo links auto-embed, and
-anything else (LinkedIn posts, articles) gets a clean "open link" card.
-Clicking any media tile opens it in a full-screen preview automatically.
+anything else (LinkedIn posts, Instagram, articles) gets a clean "open link"
+card. Clicking any media tile opens it in a full-screen preview automatically.
+
+A link can carry an optional `"thumb"` — an image shown in its place instead
+of a bare card, either a repo-relative path or a URL the destination already
+serves (e.g. `https://img.youtube.com/vi/<id>/maxresdefault.jpg`). Linked
+cells are badged with where they go, so a preview borrowed from the project's
+own artwork still reads as "this leaves the site".
 
 Image and video URLs are repo-relative paths like
 `images/creative/branding/wrwr/cover.jpg` — add the file to the repo, then
