@@ -4,7 +4,9 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "python3",
-      "runtimeArgs": [".claude/serve.py"],
+      "runtimeArgs": [
+        "dev/serve.py"
+      ],
       "port": 4173
     }
   ]

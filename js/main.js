@@ -1,8 +1,8 @@
 /* ============================================================
    Shared behavior: nav toggle + universal media lightbox.
-   The lightbox auto-detects media type so any content added
-   through the admin (image / video / pdf / external link)
-   gets a working preview window with zero extra setup.
+   The lightbox auto-detects media type, so any item added to
+   content/*.json (image / video / pdf / external link) gets a
+   working preview window with zero extra setup.
    ============================================================ */
 
 // ---- mobile nav ----

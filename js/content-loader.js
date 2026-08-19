@@ -1,8 +1,8 @@
 /* ============================================================
-   Fetches content from /content/*.json (edited via /admin) and
-   renders it into the page. Each section is a single JSON file
-   holding a list — this is what the CMS list-editor writes to,
-   so publishing in /admin updates the live site with no rebuild.
+   Fetches content from content/*.json and renders it into the
+   page. Each section is a single JSON file holding a list, so
+   editing that file — locally or straight on github.com — is
+   all it takes to change the site; there is no build step.
    ============================================================ */
 
 function fmtRange(start, end){
@@ -21,9 +21,8 @@ async function loadJson(path, fallback){
   }
 }
 
-// list-based content files are stored as { "items": [...] } —
-// Decap CMS's file collections can't write a raw array at the
-// file root, so every list section uses this wrapper.
+// list-based content files are stored as { "items": [...] }
+// rather than a raw array at the file root.
 async function loadList(path){
   const data = await loadJson(path, { items: [] });
   return Array.isArray(data) ? data : (data.items || []);
@@ -71,7 +70,7 @@ async function renderExperienceList(){
   const el = document.getElementById('timeline');
   if (!el) return;
   const rows = await loadList('content/experience.json');
-  if (!rows.length){ el.innerHTML = emptyState('No experience entries yet — add one in /admin.'); return; }
+  if (!rows.length){ el.innerHTML = emptyState('No experience entries yet.'); return; }
   const sorted = [...rows].sort((a,b)=> (b.order||0) - (a.order||0));
   el.innerHTML = sorted.map(r => `
     <a class="timeline-row" href="experience-detail.html?id=${r.slug}">
@@ -122,7 +121,7 @@ async function renderCreativeWork(){
   const grid = document.getElementById('project-grid');
   if (!grid) return;
   allProjects = await loadList('content/creative-work.json');
-  if (!allProjects.length){ grid.innerHTML = emptyState('No projects yet — add one in /admin.'); return; }
+  if (!allProjects.length){ grid.innerHTML = emptyState('No projects yet.'); return; }
   allProjects.sort((a,b)=> (b.year||0) - (a.year||0));
   paintProjects('all');
 
@@ -224,7 +223,7 @@ async function renderCertificates(){
   const el = document.getElementById('cert-root');
   if (!el) return;
   const rows = await loadList('content/certificates.json');
-  if (!rows.length){ el.innerHTML = emptyState('No certificates yet — add one in /admin.'); return; }
+  if (!rows.length){ el.innerHTML = emptyState('No certificates yet.'); return; }
   const sorted = [...rows].sort((a,b)=> (b.year||0) - (a.year||0));
 
   // a plain object would reorder integer-like keys ("2015", "2021") into
