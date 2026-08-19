@@ -276,20 +276,29 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
 .hero-portrait img{
   position:relative; z-index:2;
   width:100%; height:auto;
-  /* the studio backdrop is near-white: multiply drops it into the paper
-     so the figure reads as a cut-out with no mask needed */
-  mix-blend-mode:multiply;
+  /* The cut-out is a real mask, generated from the photo: white keeps,
+     black drops, and the bottom fade is baked into the same file. This
+     replaced mix-blend-mode:multiply, which only *looked* transparent —
+     any stacking context that isolated the blend brought the white studio
+     backdrop straight back. */
+  -webkit-mask-image:url(../images/portrait/hani-mask.png);
+          mask-image:url(../images/portrait/hani-mask.png);
+  -webkit-mask-size:100% 100%;
+          mask-size:100% 100%;
+  -webkit-mask-repeat:no-repeat;
+          mask-repeat:no-repeat;
   animation:float-in 1s var(--ease) both;
-  -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent 99%);
-          mask-image:linear-gradient(to bottom, #000 78%, transparent 99%);
+}
+
+/* the rule closing off the right-hand edge of the portrait */
+.portrait-rule{
+  position:absolute; z-index:3; right:0; top:6%; bottom:14%;
+  width:2px; background:var(--ink);
 }
 @keyframes float-in{ from{ transform:translateY(26px); } to{ transform:none; } }
 
-/* Colour behind the figure.
-   Multiply means any solid shape overlapping the white t-shirt would dye it,
-   so the filled blob is kept low-left where it only meets paper and the dark
-   jacket (multiply barely moves dark navy), and the halo is a stroke-only
-   ring that tints nothing. */
+/* Colour behind the figure: a filled blob low-left and a stroke-only ring.
+   Both sit under the portrait, so the masked figure stays untouched. */
 .hero-portrait::before{
   content:''; position:absolute; z-index:1;
   left:-14%; bottom:2%; width:62%; padding-bottom:62%;
@@ -330,6 +339,7 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
   font-family:var(--font-display); font-weight:900;
   font-size:26px; letter-spacing:.01em; fill:var(--ink);
 }
+.sticker-burst .burst-text.long{ font-size:19px; letter-spacing:0; }
 .sticker-note{
   bottom:30%; left:-12%;
   background:var(--peri); color:var(--ink);
@@ -348,6 +358,8 @@ h3{ font-size:clamp(24px, 3vw, 34px); letter-spacing:-.025em; }
   background:var(--ink);
   overflow:hidden; margin-top:clamp(30px, 5vw, 60px);
   height:clamp(56px, 7vw, 78px);
+  cursor:pointer;            /* clicking moves the pellet */
+  touch-action:manipulation; /* no 300ms tap delay on the band */
 }
 .snake-band canvas{ display:block; width:100%; height:100%; }
 

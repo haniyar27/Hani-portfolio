@@ -1,8 +1,8 @@
 /* ============================================================
    The band under the hero: a snake that plays itself.
    Replaces the old scrolling word marquee — same black strip,
-   no text. It is decorative only, so the band is aria-hidden
-   and nothing here is reachable by keyboard.
+   no text. Click or tap the band to move the pellet; nothing
+   else here is interactive, and none of it is keyboard-reachable.
    ============================================================ */
 
 (function(){
@@ -12,8 +12,11 @@
 
   const ctx = canvas.getContext('2d');
   const ROWS = 4;              // short strip: four rows keeps the cells chunky and still leaves room to turn
-  const MAX_LEN = 14;          // capped so the snake can never box itself in
+  const START_LEN = 4;
+  const GROW = 2;              // segments gained per pellet — enough that the growth reads
+  const MAX_LEN = 22;          // capped so the snake can never box itself in
   const STEP_MS = 110;         // ~9 moves a second — reads as the old arcade pace
+  const POP_STEPS = 3;         // how long the swell after eating lasts
   const COLORS = {
     body: '#F0EBE6',           // --bone
     food: '#F5693C',           // --orange
@@ -22,7 +25,8 @@
 
   const still = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  let cell = 14, cols = 0, snake = [], dir = {x:1, y:0}, food = null;
+  let cell = 14, cols = 0, offX = 0, offY = 0;
+  let snake = [], dir = {x:1, y:0}, food = null, pop = 0, pending = 0;
   let last = 0, wait = 0, frame = null, onScreen = true;
 
   function reset(){
@@ -31,6 +35,8 @@
 
     cell = Math.max(9, Math.floor(h / ROWS));
     cols = Math.max(8, Math.floor(w / cell));
+    offX = Math.round((w - cols * cell) / 2);
+    offY = Math.round((h - ROWS * cell) / 2);
 
     const dpr = window.devicePixelRatio || 1;
     canvas.width = Math.round(w * dpr);
@@ -40,8 +46,10 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     const row = Math.floor(ROWS / 2);
-    snake = [4,3,2,1,0].map(x => ({ x, y: row }));
+    snake = [];
+    for (let i = START_LEN - 1; i >= 0; i--) snake.push({ x: i, y: row });
     dir = { x:1, y:0 };
+    pop = 0; pending = 0;
     placeFood();
     return true;
   }
@@ -97,22 +105,29 @@
     const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
     snake.unshift(head);
 
-    if (food && head.x === food.x && head.y === food.y) {
-      if (snake.length > MAX_LEN) snake.pop();
+    const ate = food && head.x === food.x && head.y === food.y;
+    if (ate) {
+      // holding the tail for a step is what makes the snake longer; one
+      // step is banked here and the rest are owed, so a pellet is worth GROW
+      pending += GROW - 1;
+      pop = POP_STEPS;
       placeFood();
+    } else if (pending > 0) {
+      pending--;
     } else {
       snake.pop();
     }
+    if (pop > 0 && !ate) pop--;
+    while (snake.length > MAX_LEN) snake.pop();
   }
 
   function draw(){
     const w = canvas.clientWidth, h = canvas.clientHeight;
     ctx.clearRect(0, 0, w, h);
 
-    const offX = Math.round((w - cols * cell) / 2);
-    const offY = Math.round((h - ROWS * cell) / 2);
     const px = (v, off) => off + v * cell;
-    const pad = Math.max(1, Math.round(cell * 0.12));
+    const base = Math.max(1, Math.round(cell * 0.12));
+    const pad = pop > 0 ? Math.max(0, base - 2) : base;   // less padding = fatter squares
 
     ctx.fillStyle = COLORS.grid;
     for (let x = 0; x < cols; x++)
@@ -121,7 +136,7 @@
 
     if (food) {
       ctx.fillStyle = COLORS.food;
-      ctx.fillRect(px(food.x, offX) + pad, px(food.y, offY) + pad, cell - pad * 2, cell - pad * 2);
+      ctx.fillRect(px(food.x, offX) + base, px(food.y, offY) + base, cell - base * 2, cell - base * 2);
     }
 
     // head solid, tail fading out — gives the run a direction to read
@@ -160,6 +175,17 @@
     draw();                       // reduced motion still gets one static frame
     play();
   }
+
+  /* click or tap drops the pellet where you pointed — the snake simply
+     re-routes to it on the next step */
+  band.addEventListener('pointerdown', (e) => {
+    const r = canvas.getBoundingClientRect();
+    const x = Math.floor((e.clientX - r.left - offX) / cell);
+    const y = Math.floor((e.clientY - r.top - offY) / cell);
+    if (inside(x, y) && !occupied(x, y)) food = { x, y };
+    else placeFood();
+    draw();
+  });
 
   let resizeTimer = null;
   window.addEventListener('resize', () => {

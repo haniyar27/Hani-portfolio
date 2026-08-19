@@ -22,6 +22,12 @@ class PagesHandler(SimpleHTTPRequestHandler):
         if self.command != 'HEAD':
             self.wfile.write(body)
 
+    def end_headers(self):
+        # never cache locally: a stale stylesheet or script silently hides
+        # the change you are trying to look at
+        self.send_header('Cache-Control', 'no-store, must-revalidate')
+        super().end_headers()
+
     def log_message(self, *a):
         pass
 
